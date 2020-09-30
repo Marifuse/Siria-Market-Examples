@@ -1,19 +1,20 @@
 <template>
   <div class="home">
     <product-card/>
-    <slide/>
+   
+    <login-form/>
   </div>
 </template>
 
 <script>
 import ProductCard from '../components/ProductCard'
-import Slide from '../components/Slide'
+import LoginForm from '../components/LoginForm'
 
 export default {
   name: 'Home',
   components: {
     ProductCard,
-    Slide,
+    LoginForm
   }
 }
 </script>
