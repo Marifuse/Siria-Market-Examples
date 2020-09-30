@@ -38,14 +38,14 @@
           <v-list-item-content>
             <v-card-text>
               <v-form>
-                <v-text-field label='Correo Electrónico' 
-                prepend-icon='mdi-account-circle-outline'
-                color="#0F7740"
+                <v-text-field label='Correo Electrónico'
+                  v-model="email" 
+                  prepend-icon='mdi-account-circle-outline'
+                  color="#0F7740"
                 />
-                <v-text-field label='Contraseña' :type="showPassword ? 'text' : 'password'"
+                <v-text-field label='Contraseña'
                   prepend-icon='mdi-lock-outline'
-                  :append-icon="showPassword ? 'mdi-eye-outline' : 'mdi-eye-off-outline'"
-                  @click:append="showPassword = !showPassword" 
+                  append-icon='mdi-eye-off-outline'
                   color="#0F7740"
                   />  
               </v-form>
@@ -57,8 +57,7 @@
               <v-btn
                 class="mt-5 mb-5"
                 dark
-                color="#0F7740"    
-                @click="login"
+                color="#0F7740"        
                 >
                 Iniciar Sesión
               </v-btn>
@@ -94,9 +93,12 @@
     data () {
       return {
         drawer: null,
+        email : "",
       }
     },
-  }
+    methods: {
+    }
+  }   
 </script>
 
 <style>
