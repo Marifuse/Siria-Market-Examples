@@ -31,7 +31,7 @@
         </v-list-item-avatar>
         
       </v-list-item>
-      <v-list-item-title class="text-center">Iniciar Sesión</v-list-item-title>
+      <v-list-item-title class="text-center font-weight-black size_title">Iniciar Sesión</v-list-item-title>
       <!--Inputs -->
       <v-list dense>
         <v-list-item>
@@ -47,14 +47,15 @@
                   :append-icon="showPassword ? 'mdi-eye-outline' : 'mdi-eye-off-outline'"
                   @click:append="showPassword = !showPassword" 
                   color="#0F7740"
-                  />
-                <!-- Texto olvidar contraseña -->
-                <v-text ><a href="" class="ref_color_text">Olvidaste tu contraseña</a></v-text>  
+                  />  
               </v-form>
             </v-card-text>
-            <!-- Boton iniciar sesion -->
             <div  class="text-center">
+              <!-- Texto olvidar contraseña -->
+              <v-text><a href="" class="ref_color_text">Olvidaste tu contraseña</a></v-text>
+              <!-- Boton iniciar sesion -->
               <v-btn
+                class="mt-5 mb-5"
                 dark
                 color="#0F7740"    
                 @click="login"
@@ -67,15 +68,23 @@
       </v-list>
       <v-divider></v-divider>
       <!--Icont Account --> 
-      <div class="icon">
-        <v-icon size="99px" >
+      <div class="icon mt-5">
+        <v-icon size="99px">
           mdi-account-circle-outline
         </v-icon>
+        <h4 class="subtitle_color_text">¿No tienes Cuenta?</h4>
+        <v-text><a href="" class="ref_color_text_2 mb-5">Regístrate</a></v-text> 
+        <br>
+        <v-btn
+          class="mt-5 mb-5"
+          color="#535353"
+          text
+          @click="drawer = false"
+         
+        >
+          Cerrar X
+        </v-btn>
       </div>
-
-        
-     
-    
     </v-navigation-drawer>
   </v-sheet>
 </template>
@@ -96,14 +105,29 @@
   height: 99px !important;
   min-width: 99px !important;
 }
-/* Letras */
+/* Texto */
+/* Titulo Iniciar Sesion */
+.size_title {
+  font-size: 18px !important;
+  color: #535353 !important;
+}
+/* Primer href */
 .ref_color_text {
   text-decoration: none;
   color: grey !important;
-  margin-left: 1.5em;
+  margin-bottom: 1em !important;
 }
+/* Pregunta y 2do href */
+.subtitle_color_text, .ref_color_text_2 {
+  color: #EB4040 !important;
+  text-decoration: none;
+  font-size: 18px;
+}
+.ref_color_text_2 {
+  font-weight: 700;
+}
+/* Icono */
 .icon{
   text-align: center;
-   
 }
 </style>
