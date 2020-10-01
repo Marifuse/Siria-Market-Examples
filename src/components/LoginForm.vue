@@ -37,13 +37,22 @@
         <v-list-item>
           <v-list-item-content>
             <v-card-text>
-              <v-form>
+              <v-form
+                ref="form"
+                v-model="valid"
+                lazy-validation
+              >
+
                 <v-text-field label='Correo Electrónico'
-                  v-model="email" 
+                  v-model="email"
+                  :rules="emailRules"   
+                  required
                   prepend-icon='mdi-account-circle-outline'
                   color="#0F7740"
+                 
                 />
                 <v-text-field label='Contraseña'
+
                   prepend-icon='mdi-lock-outline'
                   append-icon='mdi-eye-off-outline'
                   color="#0F7740"
@@ -57,10 +66,18 @@
               <v-btn
                 class="mt-5 mb-5"
                 dark
-                color="#0F7740"        
+                color="#0F7740" 
+                @click="validate"       
                 >
                 Iniciar Sesión
               </v-btn>
+              <!-- <v-btn
+                class="mb-5"
+                color="error"
+                 @click="reset"
+              >
+                Limpiar Campos
+              </v-btn> -->
             </div>
           </v-list-item-content>
         </v-list-item>
@@ -79,7 +96,6 @@
           color="#535353"
           text
           @click="drawer = false"
-         
         >
           Cerrar X
         </v-btn>
@@ -93,10 +109,21 @@
     data () {
       return {
         drawer: null,
-        email : "",
+        valid: true,
+        email: '',
+        emailRules: [
+          v => !!v || 'Ingresa un E-mail',
+          v => /.+@.+\..+/.test(v) || 'E-mail inválido',
+        ],
       }
     },
     methods: {
+      validate () {
+        this.$refs.form.validate()
+      },
+      // reset () {
+      //   this.$refs.form.reset()
+      // },
     }
   }   
 </script>
