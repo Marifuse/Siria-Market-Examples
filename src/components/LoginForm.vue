@@ -92,7 +92,7 @@
         <v-text><a href="" class="ref_color_text_2 mb-5">Regístrate</a></v-text> 
         <br>
         <v-btn
-          class="mt-5 mb-5"
+          class="mt-8 mb-5"
           color="#535353"
           text
           @click="drawer = false"

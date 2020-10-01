@@ -2,7 +2,7 @@
   <div>      
     <v-card
       :loading="loading"
-      class="mx-auto my-12 mr-4"
+      class="mx-auto my-12"
       max-width="280"
     >
       <template slot="progress">
@@ -18,7 +18,7 @@
         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
       ></v-img>
 
-      <v-card-title class="color_text size_title font-weight-medium">Za'atar Rojo</v-card-title>
+      <v-card-title class="color_text size_title font-weight-medium">Za'atar Verde</v-card-title>
       <div class="d-flex">
       <v-card-text class="pr-0" >
         <h2 class="color_text size_subtitle font-weight-light">Unidades:</h2>
@@ -139,11 +139,10 @@
 /* Boton añadir carrito */
 .btn__add {
   background-color: #67CC38 !important;
-  border-radius: 10px !important;
 } 
  /* Tamaño letra precio */
 .size_price {
-  font-size: 20px !important;
+  font-size: 22px !important;
 }
 /* Tamaño descripción precio final */
 .size_final_price {
