@@ -14,20 +14,19 @@
               <product-card/>
               <card-product/>
           </v-slide-group>
-          </v-sheet>     
+          </v-sheet> 
+          <v-btn
+            dark
+            color="#1AA3C1"
+            class="pa-3 ml-2 font-weight-light"
+            style="border-radius: 10px;"
+          >
+            Ver Todos los Productos Arabes 
+            
+          </v-btn>    
         </v-col>
       </v-row>
     </v-container>
-
-     <v-btn
-      dark
-      color="#1AA3C1"
-      class="pa-3 ml-2 font-weight-light"
-      style="border-radius: 10px;"
-    >
-      Ver Todos los Productos Arabes 
-      
-    </v-btn>
     <login-form/>
   </div>
 </template>

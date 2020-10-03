@@ -91,6 +91,7 @@
         <h4 class="subtitle_color_text">¿No tienes Cuenta?</h4>
         <v-text><a href="" class="ref_color_text_2 mb-5">Regístrate</a></v-text> 
         <br>
+        <!-- Boton de cerrar menu lateral -->
         <v-btn
           class="mt-8 mb-5"
           color="#535353"

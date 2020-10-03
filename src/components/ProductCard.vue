@@ -29,6 +29,7 @@
       >
         <v-slide-group
           active-class="#EB4040"
+          mandatory
         >
           <v-slide-item
             v-for="n in 10"
