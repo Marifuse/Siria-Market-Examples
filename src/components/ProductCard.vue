@@ -4,7 +4,9 @@
       :loading="loading"
       class="mx-auto my-12 mr-4"
       max-width="280"
+      
     >
+    
       <template slot="progress">
         <v-progress-linear
           color="deep-purple"

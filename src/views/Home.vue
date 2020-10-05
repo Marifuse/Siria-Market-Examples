@@ -28,6 +28,7 @@
       </v-row>
     </v-container>
     <login-form/>
+    <card-detail/>
   </div>
 </template>
 
@@ -36,6 +37,7 @@ import ProductTag from '../components/ProductTag'
 import ProductCard from '../components/ProductCard'
 import CardProduct from '../components/CardProduct'
 import LoginForm from '../components/LoginForm'
+import CardDetail from '../components/CardDetail'
 
 export default {
   name: 'Home',
@@ -43,7 +45,8 @@ export default {
     ProductTag,
     ProductCard,
     CardProduct,
-    LoginForm
+    LoginForm,
+    CardDetail
   }
 }
 </script>
